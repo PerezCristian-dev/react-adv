@@ -13,10 +13,9 @@ const product = {
 
 export const ShoppingPage = () => {
   return (
-    <div>
+    <div >
       <h1>ShoppingPage</h1>
       <hr />
-
       <div
         style={{
           display: "flex",
@@ -24,10 +23,13 @@ export const ShoppingPage = () => {
           flexWrap: "wrap",
         }}
       >
-        <ProductCard product={product}>
-          <ProductImage />
-          <ProductTitle />
-          <ProductButtons />
+        <ProductCard product={product} className="bg-dark" style={{background: "blue"}}>
+          <ProductImage img={product.img} className="custom-image"/>
+          <ProductTitle  className="text-white text-bold"/>
+          <ProductButtons className="custom-buttoms" style={{
+            display: "flex", 
+            justifyContent: "center",
+            }}/>
           {/* <ProductCard.Image />
           <ProductCard.Title title={"Coffee"} />
           <ProductCard.Buttons/> */}
